@@ -41,7 +41,7 @@ struct HomeView: View {
                         .cornerRadius(model.screenSize.width / 28)
                     
                     Text("Send the request")
-                        .foregroundColor(model.fontClrDark)
+                        .foregroundColor(.black)
                         .font(.system(size: model.screenSize.width / 20))
                 }
             }).padding([.bottom], model.screenSize.width / 8)
