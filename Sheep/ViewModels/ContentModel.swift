@@ -17,7 +17,7 @@ class ContentModel: ObservableObject {
     // UI COLORS
     
     @AppStorage("theme") public var currentTheme = "dark"
-    @Published var bg = Color(red: 0.05, green: 0, blue: 0)
+    @Published var bg = Color(red: 0.6016, green: 0.0234, blue: 0.4961)
     @Published var objectsClrDark = Color(red: 0.1333, green: 0.1333, blue: 0.1373)
     @Published var objectsClrMedium = Color(red: 0.2266, green: 0.2266, blue: 0.2266)
     @Published var objectsClrLight = Color(red: 0.6566, green: 0.6566, blue: 0.6566)
@@ -25,6 +25,8 @@ class ContentModel: ObservableObject {
     @Published var fontClrDark = Color(red: 0.3320, green: 0.3242, blue: 0.3242)
     @Published var fontClr = Color(red: 1, green: 1, blue: 1)
     
+    
+    @Published var phone = ""
     
     @Published var offset: CGSize = .zero
     @Published var showingSettings:Bool = false

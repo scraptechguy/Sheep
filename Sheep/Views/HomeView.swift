@@ -8,9 +8,36 @@
 import SwiftUI
 
 struct HomeView: View {
+    // Access data in ContentModel.swift
+     
+     @EnvironmentObject var model: ContentModel
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .foregroundColor(.white)
+        VStack {
+            Text("Is **THIS** person\na **SHEEP**?")
+                .foregroundColor(model.fontClr)
+                .font(.system(size: model.screenSize.width / 10))
+            
+            Text("Let's find out!")
+                .foregroundColor(model.fontClr)
+                .padding([.top], model.screenSize.width / 100)
+            
+            TextField("Phone number", text: $model.phone)
+            
+            Button(action: {}, label: {
+                ZStack {
+                    Rectangle()
+                        .fill(model.fontClr)
+                        .frame(width: model.screenSize.width / 1.2, height: model.screenSize.width / 8)
+                        .cornerRadius(model.screenSize.width / 28)
+                    
+                    Text("Send the request")
+                        .foregroundColor(model.fontClrDark)
+                        .font(.system(size: model.screenSize.width / 20))
+                }
+            })
+        }
     }
 }
 
