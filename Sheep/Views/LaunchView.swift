@@ -49,13 +49,7 @@ struct LaunchView: View {
                  .ignoresSafeArea()
              
              if model.showingSettings == true {
-                 Text("show home")
-                     .onTapGesture {
-                         withAnimation(.spring()) {
-                             model.offset = .zero
-                             model.showingSettings.toggle()
-                         }
-                     }
+                 Settings()
              }
          }
      }
