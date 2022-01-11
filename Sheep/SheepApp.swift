@@ -11,7 +11,8 @@ import SwiftUI
 struct SheepApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchView()
+                .environmentObject(ContentModel())
         }
     }
 }
