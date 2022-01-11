@@ -15,15 +15,23 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            Text("Is **THIS** person\na **SHEEP**?")
-                .foregroundColor(model.fontClr)
-                .font(.system(size: model.screenSize.width / 10))
+            Spacer()
             
-            Text("Let's find out!")
-                .foregroundColor(model.fontClr)
-                .padding([.top], model.screenSize.width / 100)
+            Group {
+                Text("Is **THIS** person\na **SHEEP**?")
+                    .foregroundColor(model.fontClr)
+                    .font(.system(size: model.screenSize.width / 9))
+                
+                Text("Let's find out!")
+                    .foregroundColor(model.fontClr)
+                    .padding([.top], model.screenSize.width / 100)
+            }
+            
+            Spacer()
             
             TextField("Phone number", text: $model.phone)
+            
+            Spacer()
             
             Button(action: {}, label: {
                 ZStack {
@@ -36,7 +44,7 @@ struct HomeView: View {
                         .foregroundColor(model.fontClrDark)
                         .font(.system(size: model.screenSize.width / 20))
                 }
-            })
+            }).padding([.bottom], model.screenSize.width / 8)
         }
     }
 }
